@@ -1,0 +1,27 @@
+@mixin darkTheme(){
+    .dark-theme & {
+        @content;
+    }
+}
+
+@mixin lightTheme(){
+    .light-theme & {
+        @content;
+    }
+}
+
+// dark theme variables
+$bg-color-dark: #1C1F2A;
+$default-dark: #fff;
+$well-dark: #2D3143;
+$accent-dark: rgb(255, 213, 0);
+
+// light theme variables
+$bg-color-light: #fff;
+$default-light: #222A2C;
+$well-light: #F7F7F7;
+$accent-light: rgb(255, 213, 0);
+$accent47-light: rgba(255, 213, 0, 0.47);
+
+// theme-agnostic variables
+$headingFontSize: 2.5rem;

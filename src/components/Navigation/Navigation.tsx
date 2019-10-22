@@ -11,10 +11,10 @@ class Navigation extends Component<any, any> {
         return (
             <nav>
                 <ul>
-                    <NavigationItem link="/" exact>About Me</NavigationItem>
-                    <NavigationItem link="/skills" exact>Skills</NavigationItem>
-                    <NavigationItem link="/experience" exact>Experience</NavigationItem>
-                    <NavigationItem link="/portfolio" exact>Portfolio</NavigationItem>
+                    <NavigationItem link="/" exact label="About Me"></NavigationItem>
+                    <NavigationItem link="/skills" exact label="Skills"></NavigationItem>
+                    <NavigationItem link="/experience" exact label="Experience"></NavigationItem>
+                    <NavigationItem link="/portfolio" exact label="Portfolio"></NavigationItem>
                 </ul>
             </nav>
         );

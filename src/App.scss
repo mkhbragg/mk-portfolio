@@ -1,11 +1,13 @@
 @font-face {
     font-family: "Fulbo-Argenta";
-    src: url("assets/fonts/fulbo-argenta.otf");
+    src: local('Pacifico Regular'), url("assets/fonts/fulbo-argenta.otf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Futura";
-    src: url("assets/fonts/futura-medium.ttf");
+    src: local('Pacifico Regular'), url("assets/fonts/futura-medium.ttf");
+    font-display: swap;
 }
 
 // global classes

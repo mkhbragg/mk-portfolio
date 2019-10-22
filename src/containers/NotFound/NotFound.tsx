@@ -7,7 +7,7 @@ const notFound = (props: any) => {
     return (
         <div className="NotFound">
             <h1>Not found.</h1>
-            <button className="Large" onClick={() => props.history.push('/')}>
+            <button aria-label="Go home" className="Large" onClick={() => props.history.push('/')}>
                 <FontAwesomeIcon icon="home"></FontAwesomeIcon>
                 Go Home
             </button>

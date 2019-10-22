@@ -15,7 +15,7 @@ const about = () => {
 
     return (
         <div className={styles.About}>
-            <p>Highly motivated <ScrollingText items={abilities} /> in pursuit of best practices, intuitive designs, and compelling groups of three.</p>
+            <div>Highly motivated <ScrollingText items={abilities} /> in pursuit of best practices, intuitive designs, and compelling groups of three.</div>
         </div>
     );
 }

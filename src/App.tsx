@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import './App.scss';
 import './assets/sass/themes.scss';
@@ -16,7 +16,7 @@ import Layout from './hoc/Layout/Layout';
 import Theme from './containers/Theme/Theme';
 
 // add Font Awesome icons to library
-library.add(faHome);
+library.add(fab, faHome, faEnvelope);
 
 const themeNames = { dark: `dark-theme`, light: `light-theme` }; 
 

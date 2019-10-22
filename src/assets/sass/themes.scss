@@ -1,3 +1,5 @@
+@import './include-media.scss';
+
 @mixin darkTheme(){
     .dark-theme & {
         @content;
@@ -25,3 +27,8 @@ $accent47-light: rgba(255, 213, 0, 0.47);
 
 // theme-agnostic variables
 $headingFontSize: 2.5rem;
+$defaultFontSize: 2rem;
+$largeFontSize: 1.5rem;
+
+// dimensions
+$toolbarHeight: 2.5rem;

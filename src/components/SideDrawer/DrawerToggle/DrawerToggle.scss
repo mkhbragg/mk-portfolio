@@ -1,0 +1,40 @@
+@import '../../../assets/sass/include-media.scss';
+@import '../../../assets/sass/themes.scss';
+
+.DrawerToggle {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    div {
+        width: 90%;
+        height: 3px;
+        margin: 5px;
+    }
+
+    //dark theme specific styling
+    @include darkTheme {
+        div {
+            background-color: $default-dark;
+        }
+    }
+        
+    //light theme specific styling
+    @include lightTheme {
+        div {
+            background-color: $default-light;
+        }
+    }
+}
+
+@include media (">tablet") {
+    .DrawerToggle {
+        display: none;
+    }
+}

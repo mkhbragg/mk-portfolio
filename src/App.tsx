@@ -1,13 +1,12 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 import './App.scss';
 import './assets/sass/themes.scss';
-import Navigation from './components/Navigation/Navigation';
 import Portfolio from './containers/Portfolio/Portfolio';
 import About from './containers/About/About';
 import Experience from './containers/Experience/Experience';
@@ -17,7 +16,7 @@ import Layout from './hoc/Layout/Layout';
 import Theme from './containers/Theme/Theme';
 
 // add Font Awesome icons to library
-library.add(fab, faCheckSquare, faCoffee);
+library.add(faHome);
 
 const themeNames = { dark: `dark-theme`, light: `light-theme` }; 
 
@@ -28,7 +27,7 @@ const App = (props: any) => {
   return (
     <BrowserRouter>
       <Theme themeName={themeName}>
-        <Layout setThemeName={setThemeName}>
+        <Layout setThemeName={setThemeName} themeName={themeName}>
           <Switch>
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/experience" component={Experience} />

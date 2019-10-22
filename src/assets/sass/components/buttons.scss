@@ -1,0 +1,50 @@
+@import '../themes.scss';
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Futura;
+
+    //dark theme specific styling
+    @include darkTheme {
+        color: $default-dark;
+
+        &:hover {
+            background-color: rgba($accent-dark, 0.1);
+        }
+
+        &:active,
+        &.active {
+            background-color: rgba($accent-dark, 0.2);
+        }
+    }
+        
+    //light theme specific styling
+    @include lightTheme {
+        color: $default-light;
+
+        &:hover {
+            background-color: rgba($accent-light, 0.1);
+        }
+
+        &:active,
+        &.active {
+            background-color: rgba($accent-light, 0.2);
+        }
+    }
+}
+
+button.Large {
+    @extend button;
+    display: flex;
+    width: auto;
+    min-height: 2rem;
+    margin: auto;
+    padding: 0.5rem;
+    font-size: $largeFontSize;
+
+    svg {
+        margin-right: 0.25rem;
+    }
+}

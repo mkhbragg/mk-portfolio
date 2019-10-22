@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Layout.scss';
 import Navigation from '../../components/Navigation/Navigation';
 import Toolbar from '../../components/Toolbar/Toolbar';
-// import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
+import SideDrawer from '../../components/SideDrawer/SideDrawer';
 
 class Layout extends Component<any, any> {
     public static propTypes = {};
@@ -25,12 +25,15 @@ class Layout extends Component<any, any> {
     render () {
         return (
             <div className="Content">
-                <Toolbar {...this.props}></Toolbar>
-                <div>Side Drawer</div>
-                <Navigation></Navigation>
-                {/* <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} /> */}
-                {/* <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} /> */}
+                <Toolbar {...this.props} drawerToggleClicked={this.sideDrawerToggleHandler} />
+                <div className="BigNav">
+                    <Navigation />
+                </div>
+                <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} />
                 <main className="Main">
+                    {/* <div className="Navigation">
+                        <Navigation></Navigation>
+                    </div> */}
                     {this.props.children}
                 </main>
             </div>

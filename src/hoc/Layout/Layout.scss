@@ -1,7 +1,8 @@
 @import '../../assets/sass/themes.scss';
 
 .Content {
-    min-height: 100vh;
+    min-height: calc(100vh - #{$toolbarHeight});
+    font-family: Futura;
 
     //dark theme specific styling
     @include darkTheme {
@@ -17,5 +18,17 @@
 }
 
 .Main {
-    margin-top: 70px;
+    margin-top: $toolbarHeight;
+    padding: 4rem;
+}
+
+.BigNav {
+    position: relative;
+    top: $toolbarHeight;
+}
+
+@include media ("<tablet") {
+    .BigNav {
+        display: none;
+    }
 }

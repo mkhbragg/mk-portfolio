@@ -1,0 +1,36 @@
+@import '../themes.scss';
+
+a.Default {
+    cursor: pointer;
+    font-family: Futura;
+
+    //dark theme specific styling
+    @include darkTheme {
+        background-color: $accent-dark;
+        color: $bg-color-dark;
+
+        &:hover {
+            background-color: rgba($accent-dark, 0.1);
+            color: $default-dark;
+        }
+
+        &:active {
+            background-color: rgba($accent-dark, 0.2);
+            color: $default-dark;
+        }
+    }
+        
+    //light theme specific styling
+    @include lightTheme {
+        background-color: $accent-light;
+        color: $default-light;
+
+        &:hover {
+            background-color: rgba($accent-light, 0.1);
+        }
+
+        &:active {
+            background-color: rgba($accent-light, 0.2);
+        }
+    }
+}

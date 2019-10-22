@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import styles from './Navigation.module.scss';
 import '../../App.scss';
 import NavigationItem from './NavigationItem/NavigationItem';
 
@@ -10,7 +9,7 @@ class Navigation extends Component<any, any> {
 
     render() {
         return (
-            <nav className={styles.Navigation}>
+            <nav>
                 <ul>
                     <NavigationItem link="/" exact>About Me</NavigationItem>
                     <NavigationItem link="/skills" exact>Skills</NavigationItem>

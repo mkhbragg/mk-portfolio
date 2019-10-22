@@ -21,8 +21,8 @@ class Toolbar extends Component<any, any> {
             <header className="Toolbar">
                 <button aria-label="Open navigation" className="CurrentSpace" onClick={this.props.drawerToggleClicked}>{ routes[this.props.location.pathname] }</button>
                 <div className="Contact">
-                    <button aria-label="My github page" className="Large" onClick={() => this.goToLink('https://github.com/mkhbragg')}><FontAwesomeIcon icon={['fab', 'github']}></FontAwesomeIcon></button>
-                    <button aria-label="My linkedin page" className="Large" onClick={() => this.goToLink('https://www.linkedin.com/in/mariah-bragg-582abb91/')}><FontAwesomeIcon icon={['fab', 'linkedin']}></FontAwesomeIcon></button>
+                    <button aria-label="My github page" className="Large Icon" onClick={() => this.goToLink('https://github.com/mkhbragg')}><FontAwesomeIcon icon={['fab', 'github']}></FontAwesomeIcon></button>
+                    <button aria-label="My linkedin page" className="Large Icon" onClick={() => this.goToLink('https://www.linkedin.com/in/mariah-bragg-582abb91/')}><FontAwesomeIcon icon={['fab', 'linkedin']}></FontAwesomeIcon></button>
                 </div>
                 <ThemeSwitcher {...this.props} />
             </header>

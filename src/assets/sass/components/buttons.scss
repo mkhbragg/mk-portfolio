@@ -44,7 +44,7 @@ button.Large {
     padding: 0.5rem;
     font-size: $largeFontSize;
 
-    svg {
+    svg:not(&.Icon) {
         margin-right: 0.25rem;
     }
 }

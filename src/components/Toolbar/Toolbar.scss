@@ -71,6 +71,10 @@
 
 @include media (">=tablet") {
     .CurrentSpace {
-        visibility: hidden;
+        display: none;
+    }
+
+    .Contact {
+        margin: 0 auto 0 calc(50vw - 5rem);
     }
 }

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
-import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
 import './Toolbar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const routes: any = {
     '/' : 'About Me',
@@ -13,11 +13,17 @@ const routes: any = {
 }
 
 class Toolbar extends Component<any, any> {
+    goToLink(link: string) {
+        window.location.href = link;
+    }
     render() {
         return (
             <header className="Toolbar">
                 <button className="CurrentSpace" onClick={this.props.drawerToggleClicked}>{ routes[this.props.location.pathname] }</button>
-                <DrawerToggle clicked={this.props.drawerToggleClicked} />
+                <div className="Contact">
+                    <button className="Large" onClick={() => this.goToLink('https://github.com/mkhbragg')}><FontAwesomeIcon icon={['fab', 'github']}></FontAwesomeIcon></button>
+                    <button className="Large" onClick={() => this.goToLink('https://www.linkedin.com/in/mariah-bragg-582abb91/')}><FontAwesomeIcon icon={['fab', 'linkedin']}></FontAwesomeIcon></button>
+                </div>
                 <ThemeSwitcher {...this.props} />
             </header>
         );

@@ -48,3 +48,9 @@ button.Large {
         margin-right: 0.25rem;
     }
 }
+
+@include media ("<=tablet") {
+    button.Large {
+        font-size: 1rem;
+    }
+}

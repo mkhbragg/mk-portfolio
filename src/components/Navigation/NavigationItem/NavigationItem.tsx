@@ -34,10 +34,10 @@ class NavigationItem extends Component<any, any> {
             <li className="NavigationItem">
             <button
                 onClick={(e) => this.handleRipple(this.props.link, e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                aria-label="test">
+                aria-label={this.props.label}>
                 <NavLink to={this.props.link} exact={this.props.exact}>
                     { this.state.ripple ? <div className="RippleEffect" style={this.state.rippleStyle}></div> : null }
-                    {this.props.children}
+                    {this.props.label}
                 </NavLink>
                 </button>
             </li>
@@ -46,8 +46,8 @@ class NavigationItem extends Component<any, any> {
 }
 
 NavigationItem.propTypes = {
-    exact:     PropTypes.bool,
-    children:   PropTypes.node.isRequired,
+    exact:      PropTypes.bool,
+    label:      PropTypes.string.isRequired,
     link:       PropTypes.string.isRequired
 };
 

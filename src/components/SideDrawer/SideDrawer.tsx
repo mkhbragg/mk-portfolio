@@ -15,7 +15,7 @@ const sideDrawer = ( props: any ) => {
         <Aux>
             <Backdrop show={props.open} clicked={props.closed}/>
             <div className={attachedClasses.join(' ')} onClick={props.closed}>
-                <button className="CloseIcon">
+                <button className="CloseIcon" aria-label="Toggle side drawer">
                     <div></div>
                     <div></div>
                 </button>

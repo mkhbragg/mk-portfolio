@@ -7,7 +7,7 @@ const about = () => {
     const abilities = [
         { id: 0, label: 'software developer' },
         { id: 1, label: 'researcher' },
-        { id: 2, label: 'UX fangirl' },
+        { id: 2, label: 'UX hobbyist' },
         { id: 3, label: 'tinkerer' },
         { id: 4, label: 'curious mind' },
         { id: 5, label: 'full-stack developer' },

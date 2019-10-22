@@ -40,6 +40,12 @@
         .CurrentSpace:hover {
             background-color: rgba($accent-dark, 0.1);
         }
+
+        @include media ("<tablet") {
+            .CurrentSpace {
+                font-size: 1rem;
+            }
+        }
     }
         
     //light theme specific styling
@@ -53,6 +59,12 @@
 
         .CurrentSpace:hover {
             background-color: rgba($accent-light, 0.1);
+        }
+
+        @include media ("<tablet") {
+            .CurrentSpace {
+                font-size: 1rem;
+            }
         }
     }
 }

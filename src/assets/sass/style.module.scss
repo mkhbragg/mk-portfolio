@@ -1,0 +1,6 @@
+@import './themes.scss';
+
+:export {
+    lightThemeDefaultText: $default-light;
+    darkThemeDefaultText: $default-dark;
+}

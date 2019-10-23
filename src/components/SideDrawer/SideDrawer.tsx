@@ -1,5 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Navigation from '../Navigation/Navigation';
 import './SideDrawer.scss';

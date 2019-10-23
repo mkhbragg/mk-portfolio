@@ -9,7 +9,10 @@ const routes: any = {
     '/' : 'About Me',
     '/portfolio' : 'Portfolio',
     '/experience' : 'Experience',
-    '/skills' : 'Skills'
+    '/skills' : 'Skills',
+    '/skills/core': 'Skills: Core',
+    '/skills/general': 'Skills: General',
+    '/skills/tools': 'Skills: Tools',
 }
 
 class Toolbar extends Component<any, any> {

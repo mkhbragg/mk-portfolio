@@ -31,7 +31,7 @@ const App = (props: any) => {
           <Switch>
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/experience" component={Experience} />
-            <Route path="/skills" exact component={Skills} />
+            <Route path="/skills" component={() => <Skills themeName={themeName} />} />
             <Route path="/" exact component={About} />
             {/* <Redirect from="/something" to="/something-else" /> */}
             <Route component={NotFound} />

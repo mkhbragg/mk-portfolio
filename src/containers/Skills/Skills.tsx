@@ -39,7 +39,7 @@ class Skills extends Component<any, any> {
                     <Route path={`${this.props.match.url}/general`} exact component={() => <PieChart data={GENSKILL_DATA} options={options} /> } />
                     <Redirect from="/" to={`${this.props.match.url}/core`} />
                 </Switch>
-                <p>Each segment of the doughnut charts above expresses years of experience in a given area.</p>
+                <p>Each segment of the chart above expresses years of experience in a given area.</p>
             </div>
         );
     }

@@ -78,3 +78,10 @@
         margin: 0 auto 0 calc(50vw - 5rem);
     }
 }
+
+@include media ("<tablet") {
+    .Contact {
+        position: absolute;
+        right: 6.5rem;
+    }
+}

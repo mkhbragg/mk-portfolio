@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import './ScrollingText.scss';
 
 class ScrollingText extends Component<any, any> {
+    timeout: any;
     state = {
-        zIndex: 0,
-        activeTextId: -1
+        activeTextId: -1,
+        timeout: null
     }
 
     // only update component if the active item has changed
@@ -15,9 +16,9 @@ class ScrollingText extends Component<any, any> {
 
     // cycle through each item and set state to index of currently active item
     componentDidUpdate(prevProps: any, prevState: any) {
-        setTimeout(() => {
+        this.timeout = setTimeout(() => {
             let newVal = this.state.activeTextId < this.props.items.length - 1 ? (this.state.activeTextId + 1) : (this.state.activeTextId + 1)%(this.props.items.length);
-            this.setState({ activeTextId: newVal, zIndex: ++prevState.zIndex });
+            this.setState({ activeTextId: newVal });
         }, 2000);
     }
 
@@ -28,15 +29,19 @@ class ScrollingText extends Component<any, any> {
         }
     }
 
-    getZIndex = (id: number) => {
-        return id === this.state.activeTextId ? this.state.zIndex : 0;
+    componentWillUnmount() {
+        clearTimeout(this.timeout);
+    }
+
+    getVisibility = (id: number) => {
+        return id === this.state.activeTextId ? 'initial' : 'hidden';
     }
 
     render () {
         return (
             <span className="ScrollingText">
                 {this.props.items.map( (item: any) => (
-                    <span key={item.id} style={{ zIndex: this.getZIndex(item.id) }}>{item.label}</span>
+                    <span key={item.id} style={{ visibility: this.getVisibility(item.id) }}>{item.label}</span>
                 ))}
             </span>
         );

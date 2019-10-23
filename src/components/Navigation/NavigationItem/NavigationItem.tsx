@@ -16,7 +16,7 @@ class NavigationItem extends Component<any, any> {
         }
     }
 
-    handleRipple = (route: string, x: any, y: any) => {
+    handleRipple = (route: string, x: any, y: any, e: any) => {
         // set ripple position and turn it on
         this.setState({ ripple: true, rippleStyle: { top: y, left: x } });
     
@@ -32,13 +32,15 @@ class NavigationItem extends Component<any, any> {
     render() {
         return (
             <li className="NavigationItem">
-            <button
-                onClick={(e) => this.handleRipple(this.props.link, e.nativeEvent.offsetX, e.nativeEvent.offsetY)}
-                aria-label={this.props.label}>
-                <NavLink to={this.props.link} exact={this.props.exact}>
-                    { this.state.ripple ? <div className="RippleEffect" style={this.state.rippleStyle}></div> : null }
-                    {this.props.label}
-                </NavLink>
+                <button
+                    onClick={(e) => this.handleRipple(this.props.link, e.nativeEvent.offsetX, e.nativeEvent.offsetY, e)}
+                    aria-label={this.props.label}>
+                    <NavLink
+                        onClick={(e) => e.preventDefault()}
+                        to={this.props.link} exact={this.props.exact}>
+                        { this.state.ripple ? <div className="RippleEffect" style={this.state.rippleStyle}></div> : null }
+                        {this.props.label}
+                    </NavLink>
                 </button>
             </li>
         );

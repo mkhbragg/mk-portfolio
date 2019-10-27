@@ -1,0 +1,69 @@
+@import '../../assets/sass/themes.scss';
+
+.ExperienceItem {
+    padding: 2rem;
+    position: relative;
+
+    &:not(:first-child) {
+        margin: 2rem auto;
+    }
+    
+    @include darkTheme {
+        border: 1px solid $accent-dark;
+    }
+    
+    @include lightTheme {
+        border: 1px solid $accent-light;
+    }
+
+    .Heading {
+        font-size: $descriptionFontSize;
+        font-family: Fulbo;
+        padding: 0.5rem;
+        position: absolute;
+        top: -1rem;
+
+        @include darkTheme {
+            background-color: $accent-dark;
+        }
+        
+        @include lightTheme {
+            background-color: $accent-light;
+        }
+    }
+
+    .Role {
+        font-family: Fulbo;
+        padding: 0.5rem 0;
+    }
+
+    .Dates {
+        position: absolute;
+        font-size: $smallFontSize;
+    }
+
+    .Description {
+        font-size: $descriptionFontSize;
+    }
+}
+
+@include media ("<phone") {
+    .ExperienceItem .Dates {
+        left: 2rem;
+        top: 1.5rem;
+    }
+
+    .ExperienceItem .Heading {
+        left: 0.5rem;
+        right: 0.5rem;
+        text-align: center;
+        font-size: $smallFontSize;
+    }
+}
+
+@include media (">=phone") {
+    .ExperienceItem .Dates {
+        right: 2rem;
+        top: 1rem;
+    }
+}

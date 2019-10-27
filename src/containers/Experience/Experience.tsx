@@ -1,8 +1,16 @@
 import React from 'react';
 
+import ExperienceItem from '../../components/ExperienceItem/ExperienceItem';
+import { WORKEXPERIENCE } from '../../resources/ExperienceData';
+
+
+
 const experience = () => {
+    const exp = WORKEXPERIENCE.map((item) => <ExperienceItem key={item.id} experience={item} />);
     return (
-        <div>My experience. Coming soon! I promise.</div>
+        <div className="Experience">
+            { exp }
+        </div>
     );
 }
 

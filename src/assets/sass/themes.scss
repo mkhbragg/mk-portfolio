@@ -12,11 +12,39 @@
     }
 }
 
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+       -moz-animation: #{$str};
+        -ms-animation: #{$str};
+         -o-animation: #{$str};
+            animation: #{$str};      
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
 // dark theme variables
 $bg-color-dark: #1C1F2A;
 $default-dark: #fff;
+$default-dark-contrast: #222A2C;
 $well-dark: #2D3143;
 $accent-dark: rgb(255, 213, 0);
+$secondary-dark: #ED7D3A;
 
 // light theme variables
 $bg-color-light: #fff;
@@ -24,6 +52,7 @@ $default-light: #222A2C;
 $well-light: #F7F7F7;
 $accent-light: rgb(255, 213, 0);
 $accent47-light: rgba(255, 213, 0, 0.47);
+$secondary-light: #EF2D56;
 
 // theme-agnostic variables
 $headingFontSize: 2.5rem;

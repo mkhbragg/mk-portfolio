@@ -1,19 +1,41 @@
 @import '../../assets/sass/themes.scss';
 
-.ExperienceItem {
-    padding: 2rem;
-    position: relative;
+@include keyframes(rainbow) {
+    0% { background-position:0% 82% }
+    50% { background-position:100% 19% }
+    100% { background-position:0% 82% }
+}
 
+// use this container to spoof a 1px border
+.ExperienceItemContainer {
     &:not(:first-child) {
         margin: 2rem auto;
     }
-    
+    padding: 1px;
+
     @include darkTheme {
-        border: 1px solid $accent-dark;
+        background: linear-gradient(124deg, #FFD500, #ED7D3A);
+        background-size: 1800% 1800%;
+        @include animation('rainbow 9s ease infinite');
     }
     
     @include lightTheme {
-        border: 1px solid $accent-light;
+        background: linear-gradient(124deg, #FFD500, #FCF6B1);
+        background-size: 1800% 1800%;
+        @include animation('rainbow 9s ease infinite');
+    }
+}
+
+.ExperienceItem {
+    padding: 2rem;
+    position: relative;
+    
+    @include darkTheme {
+        background-color: $bg-color-dark;
+    }
+    
+    @include lightTheme {
+        background-color: $bg-color-light;
     }
 
     .Heading {
@@ -24,11 +46,17 @@
         top: -1rem;
 
         @include darkTheme {
-            background-color: $accent-dark;
+            color: $default-dark-contrast;
+            background: linear-gradient(124deg, #FFD500, #ED7D3A);
+            
+            background-size: 1800% 1800%;
+            @include animation('rainbow 9s ease infinite');
         }
         
         @include lightTheme {
-            background-color: $accent-light;
+            background: linear-gradient(124deg, #FFD500, #FCF6B1);
+            background-size: 1800% 1800%;
+            @include animation('rainbow 9s ease infinite');
         }
     }
 

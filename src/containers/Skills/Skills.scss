@@ -15,6 +15,7 @@
         display: flex;
         justify-content: center;
         padding-left: 0;
+        margin: 0;
 
         li a {
             text-decoration: none;
@@ -28,6 +29,7 @@
                 color: $default-dark;
 
                 &.active {
+                    @extend .futura-bold;
                     background-image: linear-gradient(to right, $accent-dark, $accent-dark);
                 }
             }
@@ -37,6 +39,7 @@
                 color: $default-light;
 
                 &.active {
+                    @extend .futura-bold;
                     background-image: linear-gradient(to right, $accent47-light, $accent47-light);
                 }
             }

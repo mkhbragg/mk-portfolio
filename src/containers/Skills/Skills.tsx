@@ -33,13 +33,13 @@ class Skills extends Component<any, any> {
                         <li><NavLink to={`${this.props.match.url}/general`}>General</NavLink></li>
                     </ul>
                 </nav>
+                <p>Each segment of the chart below expresses years of experience in a given area.</p>
                 <Switch>
                     <Route path={`${this.props.match.url}/core`} exact component={() => <PieChart data={SKILL_DATA} options={options} /> } />
                     <Route path={`${this.props.match.url}/tools`} exact component={() => <PieChart data={LIBSKILL_DATA} options={options} /> } />
                     <Route path={`${this.props.match.url}/general`} exact component={() => <PieChart data={GENSKILL_DATA} options={options} /> } />
                     <Redirect from="/" to={`${this.props.match.url}/core`} />
                 </Switch>
-                <p>Each segment of the chart above expresses years of experience in a given area.</p>
             </div>
         );
     }

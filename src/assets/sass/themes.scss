@@ -38,19 +38,23 @@
     }
 }
 
+.futura-bold {
+    font-family: Futura-Bold;
+}
+
 // dark theme variables
 $bg-color-dark: #1C1F2A;
 $default-dark: #fff;
 $default-dark-contrast: #222A2C;
 $well-dark: #2D3143;
-$accent-dark: rgb(255, 213, 0);
+$accent-dark: #ffd500;
 $secondary-dark: #ED7D3A;
 
 // light theme variables
 $bg-color-light: #fff;
 $default-light: #222A2C;
 $well-light: #F7F7F7;
-$accent-light: rgb(255, 213, 0);
+$accent-light: #ffd500;
 $accent47-light: rgba(255, 213, 0, 0.47);
 $secondary-light: #EF2D56;
 

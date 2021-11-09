@@ -1,97 +1,110 @@
-@import '../../assets/sass/themes.scss';
+@import "../../assets/sass/themes.scss";
 
 @include keyframes(rainbow) {
-    0% { background-position:0% 82% }
-    50% { background-position:100% 19% }
-    100% { background-position:0% 82% }
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
 }
 
 // use this container to spoof a 1px border
 .ExperienceItemContainer {
-    &:not(:first-child) {
-        margin: 2rem auto;
-    }
-    padding: 1px;
+  &:not(:first-child) {
+    margin: 2rem auto;
+  }
 
-    @include darkTheme {
-        background: linear-gradient(124deg, #FFD500, #ED7D3A);
-        background-size: 1800% 1800%;
-        @include animation('rainbow 9s ease infinite');
-    }
-    
-    @include lightTheme {
-        background: linear-gradient(124deg, #FFD500, #FCF6B1);
-        background-size: 1800% 1800%;
-        @include animation('rainbow 9s ease infinite');
-    }
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  padding: 1px;
+  border-radius: 0.5rem;
+
+  @include darkTheme {
+    background: linear-gradient(124deg, #ffd500, #ed7d3a);
+    background-size: 1800% 1800%;
+    @include animation("rainbow 9s ease infinite");
+  }
+
+  @include lightTheme {
+    background: linear-gradient(124deg, #ffd500, #fcf6b1);
+    background-size: 1800% 1800%;
+    @include animation("rainbow 9s ease infinite");
+  }
 }
 
 .ExperienceItem {
-    padding: 2rem;
-    position: relative;
-    
+  padding: 2rem;
+  position: relative;
+  border-radius: 0.5rem;
+
+  @include darkTheme {
+    background-color: $bg-color-dark;
+  }
+
+  @include lightTheme {
+    background-color: $bg-color-light;
+  }
+
+  .Heading {
+    font-size: $descriptionFontSize;
+    font-family: Fulbo-Argenta;
+    padding: 0.5rem;
+    position: absolute;
+    top: -1rem;
+
     @include darkTheme {
-        background-color: $bg-color-dark;
+      color: $default-dark-contrast;
+      background: linear-gradient(124deg, #ffd500, #ed7d3a);
+
+      background-size: 1800% 1800%;
+      @include animation("rainbow 9s ease infinite");
     }
-    
+
     @include lightTheme {
-        background-color: $bg-color-light;
+      background: linear-gradient(124deg, #ffd500, #fcf6b1);
+      background-size: 1800% 1800%;
+      @include animation("rainbow 9s ease infinite");
     }
+  }
 
-    .Heading {
-        font-size: $descriptionFontSize;
-        font-family: Fulbo-Argenta;
-        padding: 0.5rem;
-        position: absolute;
-        top: -1rem;
+  .Role {
+    font-family: Fulbo-Argenta;
+    padding: 0.5rem 0;
+  }
 
-        @include darkTheme {
-            color: $default-dark-contrast;
-            background: linear-gradient(124deg, #FFD500, #ED7D3A);
-            
-            background-size: 1800% 1800%;
-            @include animation('rainbow 9s ease infinite');
-        }
-        
-        @include lightTheme {
-            background: linear-gradient(124deg, #FFD500, #FCF6B1);
-            background-size: 1800% 1800%;
-            @include animation('rainbow 9s ease infinite');
-        }
-    }
+  .Dates {
+    position: absolute;
+    font-size: $smallFontSize;
+  }
 
-    .Role {
-        font-family: Fulbo-Argenta;
-        padding: 0.5rem 0;
-    }
-
-    .Dates {
-        position: absolute;
-        font-size: $smallFontSize;
-    }
-
-    .Description {
-        font-size: $descriptionFontSize;
-    }
+  .Description {
+    font-size: $descriptionFontSize;
+  }
 }
 
-@include media ("<phone") {
-    .ExperienceItem .Dates {
-        left: 2rem;
-        top: 1.5rem;
-    }
+@include media("<phone") {
+  .ExperienceItem .Dates {
+    left: 2rem;
+    top: 1.5rem;
+  }
 
-    .ExperienceItem .Heading {
-        left: 0.5rem;
-        right: 0.5rem;
-        text-align: center;
-        font-size: $smallFontSize;
-    }
+  .ExperienceItem .Heading {
+    left: 0.5rem;
+    right: 0.5rem;
+    text-align: center;
+    font-size: $smallFontSize;
+  }
 }
 
-@include media (">=phone") {
-    .ExperienceItem .Dates {
-        right: 2rem;
-        top: 1rem;
-    }
+@include media(">=phone") {
+  .ExperienceItem .Dates {
+    right: 2rem;
+    top: 1rem;
+  }
 }

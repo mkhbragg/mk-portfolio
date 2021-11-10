@@ -12,7 +12,7 @@ const about = () => {
     { id: 3, label: "tinkerer" },
     { id: 4, label: "curious mind" },
     { id: 5, label: "jiu jitsu purple belt" },
-    { id: 5, label: "Lego addict" },
+    { id: 6, label: "Lego addict" },
   ];
 
   return (

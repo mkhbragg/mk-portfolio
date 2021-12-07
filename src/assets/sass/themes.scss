@@ -1,62 +1,64 @@
-@import './include-media.scss';
+@import "./include-media.scss";
 
-@mixin darkTheme(){
-    .dark-theme & {
-        @content;
-    }
+@mixin darkTheme() {
+  .dark-theme & {
+    @content;
+  }
 }
 
-@mixin lightTheme(){
-    .light-theme & {
-        @content;
-    }
+@mixin lightTheme() {
+  .light-theme & {
+    @content;
+  }
 }
 
 @mixin animation($str) {
-    -webkit-animation: #{$str};
-       -moz-animation: #{$str};
-        -ms-animation: #{$str};
-         -o-animation: #{$str};
-            animation: #{$str};      
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
 }
 
 @mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }  
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }  
-    @keyframes #{$animation-name} {
-        @content;
-    }
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
 
 .futura-bold {
-    font-family: Futura-Bold;
+  font-family: Futura-Bold;
 }
 
 // dark theme variables
-$bg-color-dark: #1C1F2A;
+$bg-color-dark: #1c1f2a;
 $default-dark: #fff;
-$default-dark-contrast: #222A2C;
-$well-dark: #2D3143;
+$secondary-text-dark: #1e2948;
+$default-dark-contrast: #222a2c;
+$well-dark: #2d3143;
 $accent-dark: #ffd500;
-$secondary-dark: #ED7D3A;
+$secondary-dark: #ed7d3a;
 
 // light theme variables
 $bg-color-light: #fff;
-$default-light: #222A2C;
-$well-light: #F7F7F7;
+$default-light: #222a2c;
+$secondary-text-light: #e7ecef;
+$well-light: #f7f7f7;
 $accent-light: #ffd500;
 $accent47-light: rgba(255, 213, 0, 0.47);
-$secondary-light: #EF2D56;
+$secondary-light: #ef2d56;
 
 // theme-agnostic variables
 $headingFontSize: 2.5rem;

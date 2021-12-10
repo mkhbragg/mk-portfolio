@@ -1,87 +1,95 @@
-@import '../../assets/sass/themes.scss';
+@import "../../assets/sass/themes.scss";
 
 .Toolbar {
-    height: $toolbarHeight;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+  height: $toolbarHeight;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 90;
+
+  .Contact {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 90;
+  }
 
-    .Contact {
-        display: flex;
-    }
+  .CurrentSpace {
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-family: Fulbo-Argenta;
+    font-size: 1.5rem;
+    background-position: 0 1.04em;
+    background-repeat: repeat-x;
+    background-size: 8px 0.25rem;
+  }
+
+  //dark theme specific styling
+  @include darkTheme {
+    background-color: $bg-color-dark;
 
     .CurrentSpace {
-        cursor: pointer;
-        border: 1px solid transparent;
-        background-color: transparent;
-        font-family: Fulbo-Argenta;
-        font-size: 1.5rem;
-        background-position: 0 1.04em;
-        background-repeat: repeat-x;
-        background-size: 8px 0.25rem;
+      color: $default-dark;
+      background-image: linear-gradient(to right, $accent-dark, $accent-dark);
     }
 
-    //dark theme specific styling
-    @include darkTheme {
-        background-color: $bg-color-dark;
-
-        .CurrentSpace {
-            color: $default-dark;
-            background-image: linear-gradient(to right, $accent-dark, $accent-dark);
-        }
-
-        .CurrentSpace:hover {
-            background-color: rgba($accent-dark, 0.1);
-        }
-
-        @include media ("<tablet") {
-            .CurrentSpace {
-                font-size: 1rem;
-            }
-        }
+    .CurrentSpace:hover {
+      background-color: rgba($accent-dark, 0.1);
     }
-        
-    //light theme specific styling
-    @include lightTheme {
-        background-color: $bg-color-light;
 
-        .CurrentSpace {
-            color: $default-light;
-            background-image: linear-gradient(to right, $accent47-light, $accent47-light);
-        }
-
-        .CurrentSpace:hover {
-            background-color: rgba($accent-light, 0.1);
-        }
-
-        @include media ("<tablet") {
-            .CurrentSpace {
-                font-size: 1rem;
-            }
-        }
+    @include media("<tablet") {
+      .CurrentSpace {
+        font-size: 1rem;
+      }
     }
-}
+  }
 
-@include media (">=tablet") {
+  //light theme specific styling
+  @include lightTheme {
+    background-color: $bg-color-light;
+
     .CurrentSpace {
-        display: none;
+      color: $default-light;
+      background-image: linear-gradient(
+        to right,
+        $accent47-light,
+        $accent47-light
+      );
     }
 
-    .Contact {
-        margin: 0 auto 0 calc(50vw - 5rem);
+    .CurrentSpace:hover {
+      background-color: rgba($accent-light, 0.1);
     }
+
+    @include media("<tablet") {
+      .CurrentSpace {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
-@include media ("<tablet") {
-    .Contact {
-        position: absolute;
-        right: 6.5rem;
-    }
+@include media(">=tablet") {
+  .CurrentSpace {
+    display: none;
+  }
+
+  .Contact {
+    margin: 0 auto 0 calc(50vw - 5rem);
+  }
+}
+
+@include media("<tablet") {
+  .Contact {
+    position: absolute;
+    right: 6.5rem;
+  }
+
+  .Toolbar {
+    justify-content: flex-start;
+  }
 }

@@ -24,56 +24,29 @@
 
   padding: 1px;
   border-radius: 0.5rem;
-
-  @include darkTheme {
-    background: linear-gradient(124deg, #ffd500, #ed7d3a);
-    background-size: 1800% 1800%;
-    @include animation("rainbow 9s ease infinite");
-  }
-
-  @include lightTheme {
-    background: linear-gradient(124deg, #ffd500, #fcf6b1);
-    background-size: 1800% 1800%;
-    @include animation("rainbow 9s ease infinite");
-  }
 }
 
 .ExperienceItem {
-  padding: 2rem;
+  padding: 4rem;
   position: relative;
   border-radius: 0.5rem;
 
   @include darkTheme {
-    background-color: $bg-color-dark;
+    background-color: $well-dark;
   }
 
   @include lightTheme {
-    background-color: $bg-color-light;
+    background-color: $well-light;
+    box-shadow: var(--light-shadow-elevation-medium);
   }
 
   .Heading {
     font-size: $descriptionFontSize;
     font-family: Fulbo-Argenta;
-    padding: 0.5rem;
-    position: absolute;
-    top: -1rem;
-
-    @include darkTheme {
-      color: $default-dark-contrast;
-      background: linear-gradient(124deg, #ffd500, #ed7d3a);
-
-      background-size: 1800% 1800%;
-      @include animation("rainbow 9s ease infinite");
-    }
-
-    @include lightTheme {
-      background: linear-gradient(124deg, #ffd500, #fcf6b1);
-      background-size: 1800% 1800%;
-      @include animation("rainbow 9s ease infinite");
-    }
   }
 
   .Role {
+    font-size: $largeFontSize;
     font-family: Fulbo-Argenta;
     padding: 0.5rem 0;
   }
@@ -84,7 +57,8 @@
   }
 
   .Description {
-    font-size: $descriptionFontSize;
+    font-size: $defaultFontSize;
+    line-height: $largeFontSize;
   }
 }
 

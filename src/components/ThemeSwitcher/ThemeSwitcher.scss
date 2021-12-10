@@ -1,6 +1,8 @@
-@import '../../assets/sass/components/buttons.scss';
+@import "../../assets/sass/components/buttons.scss";
 
 .ThemeSwitcher {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 20px;
 }

@@ -1,62 +1,86 @@
 @import './include-media.scss';
 
-@mixin darkTheme(){
-    .dark-theme & {
-        @content;
-    }
+:root {
+  --light-shadow-color: 0deg 0% 63%;
+  --light-shadow-elevation-low: 0px 0.5px 0.6px
+      hsl(var(--light-shadow-color) / 0.34),
+    0px 0.8px 0.9px -1.2px hsl(var(--light-shadow-color) / 0.34),
+    0px 1.9px 2.1px -2.5px hsl(var(--light-shadow-color) / 0.34);
+  --light-shadow-elevation-medium: 0px 0.5px 0.6px
+      hsl(var(--light-shadow-color) / 0.36),
+    0px 1.5px 1.7px -0.8px hsl(var(--light-shadow-color) / 0.36),
+    0px 3.8px 4.3px -1.7px hsl(var(--light-shadow-color) / 0.36),
+    -0.1px 9.3px 10.5px -2.5px hsl(var(--light-shadow-color) / 0.36);
+  --light-shadow-elevation-high: 0px 0.5px 0.6px
+      hsl(var(--light-shadow-color) / 0.34),
+    0px 2.7px 3px -0.4px hsl(var(--light-shadow-color) / 0.34),
+    -0.1px 5.1px 5.7px -0.7px hsl(var(--light-shadow-color) / 0.34),
+    -0.1px 8.3px 9.3px -1.1px hsl(var(--light-shadow-color) / 0.34),
+    -0.1px 13.3px 15px -1.4px hsl(var(--light-shadow-color) / 0.34),
+    -0.2px 20.7px 23.3px -1.8px hsl(var(--light-shadow-color) / 0.34),
+    -0.3px 31.5px 35.4px -2.1px hsl(var(--light-shadow-color) / 0.34),
+    -0.5px 46.4px 52.2px -2.5px hsl(var(--light-shadow-color) / 0.34);
 }
 
-@mixin lightTheme(){
-    .light-theme & {
-        @content;
-    }
+@mixin darkTheme() {
+  .dark-theme & {
+    @content;
+  }
+}
+
+@mixin lightTheme() {
+  .light-theme & {
+    @content;
+  }
 }
 
 @mixin animation($str) {
-    -webkit-animation: #{$str};
-       -moz-animation: #{$str};
-        -ms-animation: #{$str};
-         -o-animation: #{$str};
-            animation: #{$str};      
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
 }
 
 @mixin keyframes($animation-name) {
-    @-webkit-keyframes #{$animation-name} {
-        @content;
-    }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }  
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }  
-    @keyframes #{$animation-name} {
-        @content;
-    }
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
 
 .futura-bold {
-    font-family: Futura-Bold;
+  font-family: Futura-Bold;
 }
 
 // dark theme variables
-$bg-color-dark: #1C1F2A;
+$bg-color-dark: #1c1f2a;
 $default-dark: #fff;
-$default-dark-contrast: #222A2C;
-$well-dark: #2D3143;
+$secondary-text-dark: #687085;
+$default-dark-contrast: #222a2c;
+$well-dark: #2d3143;
 $accent-dark: #ffd500;
-$secondary-dark: #ED7D3A;
+$secondary-dark: #ed7d3a;
 
 // light theme variables
 $bg-color-light: #fff;
-$default-light: #222A2C;
-$well-light: #F7F7F7;
+$default-light: #222a2c;
+$secondary-text-light: #747d82;
+$well-light: #f7f7f7;
 $accent-light: #ffd500;
 $accent47-light: rgba(255, 213, 0, 0.47);
-$secondary-light: #EF2D56;
+$secondary-light: #ef2d56;
 
 // theme-agnostic variables
 $headingFontSize: 2.5rem;

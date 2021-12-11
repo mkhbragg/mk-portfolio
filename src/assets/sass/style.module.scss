@@ -1,6 +1,8 @@
 @import './themes.scss';
 
 :export {
-    lightThemeDefaultText: $default-light;
-    darkThemeDefaultText: $default-dark;
+  lightThemeDefaultText: $default-light;
+  lightThemeSecondaryText: $secondary-text-light;
+  darkThemeDefaultText: $default-dark;
+  darkThemeSecondaryText: $secondary-text-dark;
 }

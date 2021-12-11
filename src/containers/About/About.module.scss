@@ -1,17 +1,17 @@
 @import '../../assets/sass/themes.scss';
 
 .About div {
-    display: inline-block;
+  display: inline-block;
 }
 
 .About img {
-    width: 30vw;
-    margin: 2rem auto;
-    display: block;
+  width: 30vw;
+  margin: 2rem auto;
+  display: block;
 }
 
-@include media ("<phone") {
-    .About img {
-        width: 80vw;
-    }
+@include media('<phone') {
+  .About img {
+    width: 80vw;
+  }
 }

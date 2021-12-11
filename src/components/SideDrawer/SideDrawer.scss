@@ -1,88 +1,92 @@
 @import '../../assets/sass/themes.scss';
 
 .SideDrawer {
-    position: fixed;
-    // width: 280px;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 200;
-    padding: 32px 16px;
-    box-sizing: border-box;
-    transition: transform 0.3s ease-out;
-    overflow: scroll;
+  position: fixed;
+  // width: 280px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+  overflow: scroll;
 
-    // TODO: add animation to the 'close' icon divs when side drawer is opened and closed
-    .CloseIcon {
-        cursor: pointer;
-        height: 2rem;
-        width: 2rem;
-        border: 1px solid transparent;
-        background-color: transparent;
-        padding: 0;
-    }
+  // TODO: add animation to the 'close' icon divs when side drawer is opened and closed
+  .CloseIcon {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: 0;
+  }
 
-    .CloseIcon:focus,
-    .CloseIcon:active {
-        background-position: 0 2.4em;
-        background-repeat: repeat-x;
-        background-size: 8px 0.25rem;
-    }
+  .CloseIcon:focus,
+  .CloseIcon:active {
+    background-position: 0 2.4em;
+    background-repeat: repeat-x;
+    background-size: 8px 0.25rem;
+  }
+
+  .CloseIcon div {
+    height: 2px;
+    width: 2rem;
+    position: absolute;
+  }
+
+  .CloseIcon div:first-child {
+    transform: rotate(45deg);
+  }
+
+  .CloseIcon div:last-child {
+    transform: rotate(-45deg);
+  }
+
+  //dark theme specific styling
+  @include darkTheme {
+    background-color: $bg-color-dark;
 
     .CloseIcon div {
-        height: 2px;
-        width: 2rem;
-        position: absolute;
+      background-color: $default-dark;
     }
 
-    .CloseIcon div:first-child {
-        transform: rotate(45deg);
+    .CloseIcon:active,
+    .CloseIcon:focus {
+      background-image: linear-gradient(to right, $accent-dark, $accent-dark);
+    }
+  }
+
+  //light theme specific styling
+  @include lightTheme {
+    background-color: $bg-color-light;
+
+    .CloseIcon div {
+      background-color: $default-light;
     }
 
-    .CloseIcon div:last-child {
-        transform: rotate(-45deg);
+    .CloseIcon:active,
+    .CloseIcon:focus {
+      background-image: linear-gradient(
+        to right,
+        $accent47-light,
+        $accent47-light
+      );
     }
-
-    //dark theme specific styling
-    @include darkTheme {
-        background-color: $bg-color-dark;
-
-        .CloseIcon div {
-            background-color: $default-dark;
-        }
-
-        .CloseIcon:active,
-        .CloseIcon:focus {
-            background-image: linear-gradient(to right, $accent-dark, $accent-dark);
-        }
-    }
-        
-    //light theme specific styling
-    @include lightTheme {
-        background-color: $bg-color-light;
-
-        .CloseIcon div {
-            background-color: $default-light;
-        }
-
-        .CloseIcon:active,
-        .CloseIcon:focus {
-            background-image: linear-gradient(to right, $accent47-light, $accent47-light);
-        }
-    }
+  }
 }
 
-@include media (">tablet") {
-    .SideDrawer {
-        display: none;
-    }
+@include media('>tablet') {
+  .SideDrawer {
+    display: none;
+  }
 }
 
 .Open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .Close {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }

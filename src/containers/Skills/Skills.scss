@@ -1,48 +1,109 @@
 @import '../../assets/sass/themes.scss';
 
-.Skills {
+// Tippy stuff - to be moved to its own component
+.tippy-content {
+  font-family: Futura;
+}
+
+.SkillMeasure {
+  margin-bottom: 3rem;
+
+  .TitleContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-    p {
-        text-align: center;
-        margin: 2rem auto;
+    .Subtitle {
+      width: min-content;
+      font-size: 0.7rem;
+      line-height: 0.7rem;
+
+      @include darkTheme {
+        color: $secondary-text-dark;
+      }
+
+      @include lightTheme {
+        color: $secondary-text-light;
+      }
     }
 
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        padding-left: 0;
-        margin: 0;
+    .Title {
+      width: max-content;
+      margin-right: 1rem;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
 
-        li a {
-            text-decoration: none;
-            margin: 0 0.5rem;
-            background-position: 0 1.04em;
-            background-repeat: repeat-x;
-            background-size: 8px 0.25rem;
+  .SkillContainer {
+    width: 100%;
+    height: 20px;
+    border-radius: 3px;
 
-            //dark theme specific styling
-            @include darkTheme {
-                color: $default-dark;
+    @include darkTheme {
+      background-color: $well-dark;
+    }
 
-                &.active {
-                    @extend .futura-bold;
-                    background-image: linear-gradient(to right, $accent-dark, $accent-dark);
-                }
-            }
-                
-            //light theme specific styling
-            @include lightTheme {
-                color: $default-light;
+    @include lightTheme {
+      background-color: $well-light;
+    }
 
-                &.active {
-                    @extend .futura-bold;
-                    background-image: linear-gradient(to right, $accent47-light, $accent47-light);
-                }
-            }
+    .Level {
+      height: 100%;
+      border-radius: 3px 16px 16px 3px;
+    }
+  }
+}
+
+.Skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  p {
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0;
+
+    li a {
+      text-decoration: none;
+      margin: 0 0.5rem;
+      background-position: 0 1.04em;
+      background-repeat: repeat-x;
+      background-size: 8px 0.25rem;
+
+      //dark theme specific styling
+      @include darkTheme {
+        color: $default-dark;
+
+        &.active {
+          @extend .futura-bold;
+          background-image: linear-gradient(
+            to right,
+            $accent-dark,
+            $accent-dark
+          );
         }
+      }
+
+      //light theme specific styling
+      @include lightTheme {
+        color: $default-light;
+
+        &.active {
+          @extend .futura-bold;
+          background-image: linear-gradient(
+            to right,
+            $accent47-light,
+            $accent47-light
+          );
+        }
+      }
     }
+  }
 }

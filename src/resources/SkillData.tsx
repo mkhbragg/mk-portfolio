@@ -1,168 +1,94 @@
-import moment from "moment";
+import { SkillLevel } from '../containers/Skills/enums'
 
-interface Skill {
-  years: number;
-  label: string;
-}
+export const CORE_SKILLS = [
+  {
+    label: 'JavaScript',
+    level: SkillLevel.ADVANCED,
+    colorDark: 'linear-gradient(to left, rgb(240, 91, 40), rgb(236, 0, 140))',
+    colorLight:
+      'linear-gradient(to left, rgba(240, 91, 40, 0.6), rgba(236, 0, 140, 0.6))',
+  },
+  {
+    label: 'HTML5/CSS3',
+    level: SkillLevel.ADVANCED,
+    colorDark: 'linear-gradient(to left, rgb(8, 212, 120), rgb(115, 209, 163))',
+    colorLight:
+      'linear-gradient(to left, rgba(8, 212, 120, 0.6), rgba(115, 209, 163, 0.6))',
+  },
+  {
+    label: 'TypeScript',
+    level: SkillLevel.ADVANCED,
+    colorDark:
+      'linear-gradient(to left, rgb(49, 121, 199), rgb(125, 123, 224))',
+    colorLight:
+      'linear-gradient(to left, rgba(49, 121, 199, 0.6), rgba(125, 123, 224, 0.6))',
+  },
+  {
+    label: 'Node.js',
+    level: SkillLevel.INTERMEDIATE,
+    colorDark: 'linear-gradient(to left, rgb(2, 110, 0), rgb(149, 203, 109))',
+    colorLight:
+      'linear-gradient(to left, rgba(2, 110, 0, 0.6), rgba(149, 203, 109, 0.6))',
+  },
+]
 
-const BORDER_WIDTH = 1;
-const BORDER_RADIUS = 3;
-
-const WARM_COLORS = [
-  "249, 65, 68",
-  "243, 114, 44",
-  "248, 150, 30",
-  "249, 199, 79",
-];
-
-const COOL_COLORS = ["151, 223, 252", "142, 181, 240"];
-
-const PINK_COLORS = [
-  "234, 105, 139",
-  "213, 93, 146",
-  "192, 82, 153",
-  "172, 70, 161",
-  "151, 58, 168",
-  "130, 47, 175",
-  "109, 35, 182",
-  "100, 17, 173",
-  "87, 16, 137",
-];
-
-const CORE_SKILLS = [
+export const FRAMEWORK_SKILLS = [
   {
-    label: "JavaScript",
-    years: moment().diff(moment("201401", "YYYYMM"), "years"),
+    label: 'React.js',
+    level: SkillLevel.ADVANCED,
+    colorDark: 'linear-gradient(to left, rgb(97, 218, 251), rgb(16, 215, 139))',
+    colorLight:
+      'linear-gradient(to left, rgba(97, 218, 251, 0.6), rgba(16, 215, 139, 0.6))',
   },
   {
-    label: "HTML5/CSS3",
-    years: moment().diff(moment("201401", "YYYYMM"), "years"),
+    label: 'Redux',
+    level: SkillLevel.INTERMEDIATE,
+    colorDark: 'linear-gradient(to left, rgb(118, 74, 188), rgb(164, 59, 204))',
+    colorLight:
+      'linear-gradient(to left, rgba(118, 74, 188, 0.6), rgba(164, 59, 204, 0.6))',
   },
   {
-    label: "TypeScript",
-    years: moment().diff(moment("201810", "YYYYMM"), "years"),
+    label: 'Angular',
+    level: SkillLevel.INTERMEDIATE,
+    colorDark: 'linear-gradient(to left, rgb(240, 1, 58), rgb(199, 24, 76))',
+    colorLight:
+      'linear-gradient(to left, rgba(240, 1, 58, 0.6), rgba(199, 24, 76, 0.6))',
   },
   {
-    label: "Node.js",
-    years: moment("201905", "YYYYMM").diff(moment("201403", "YYYYMM"), "years"),
-  },
-];
-
-const GENERAL_SKILLS = [
-  {
-    label: "Object-Oriented Programming",
-    years: 9,
+    label: 'jQuery',
+    level: SkillLevel.NOVICE,
+    colorDark: 'linear-gradient(to left, rgb(8, 106, 173), rgb(122, 207, 244))',
+    colorLight:
+      'linear-gradient(to left, rgba(8, 106, 173, 0.6), rgba(122, 207, 244, 0.6))',
   },
   {
-    label: "RESTful Development",
-    years: 6,
+    label: 'Jest',
+    level: SkillLevel.NOVICE,
+    colorDark: 'linear-gradient(to left, rgb(0, 164, 0), rgb(230, 167, 0))',
+    colorLight:
+      'linear-gradient(to left, rgba(0, 164, 0, 0.6), rgba(230, 167, 0, 0.6))',
   },
-];
-
-const TOOL_SKILLS = [
+]
+export const TOOLS_SKILLS = [
   {
-    label: "Angular",
-    years: 4,
-  },
-  {
-    label: "React",
-    years: 3,
-  },
-  {
-    label: "jQuery",
-    years: 2,
+    label: 'Git',
+    level: SkillLevel.ADVANCED,
+    colorDark: 'linear-gradient(to left, rgb(239, 57, 26), rgb(3, 137, 166))',
+    colorLight:
+      'linear-gradient(to left, rgba(239, 57, 26, 0.6), rgba(3, 137, 166, 0.6))',
   },
   {
-    label: "Sass",
-    years: 4,
+    label: 'NPM',
+    level: SkillLevel.ADVANCED,
+    colorDark: 'linear-gradient(to left, rgb(234, 32, 58), rgb(250, 179, 49))',
+    colorLight:
+      'linear-gradient(to left, rgba(234, 32, 58, 0.6), rgba(250, 179, 49, 0.6))',
   },
   {
-    label: "LESS",
-    years: 3,
+    label: 'Build Tools (Webpack/Gulp/Grunt)',
+    level: SkillLevel.NOVICE,
+    colorDark: 'linear-gradient(to left, rgb(20, 79, 128), rgb(234, 248, 255))',
+    colorLight:
+      'linear-gradient(to left, rgba(20, 79, 128, 0.6), rgba(234, 248, 255, 0.6))',
   },
-  {
-    label: "Git",
-    years: 7,
-  },
-  {
-    label: "Jest",
-    years: 0.5,
-  },
-  {
-    label: "Gulp/Grunt",
-    years: 2,
-  },
-  {
-    label: "Emotion",
-    years: 1.5,
-  },
-];
-
-const sortedSkills = (set: Skill[]) => set.sort((a, b) => a.years - b.years);
-
-const applyOpacityToColor = (color: string, opacity: number): string => {
-  return `rgba(${color}, ${opacity})`;
-};
-
-export const SKILL_DATA = {
-  datasets: [
-    {
-      label: "Core Skills",
-      data: sortedSkills(CORE_SKILLS).map((skill) => skill.years),
-      backgroundColor: WARM_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 0.6)
-      ),
-      borderColor: WARM_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 1)
-      ),
-      borderWidth: BORDER_WIDTH,
-      borderRadius: BORDER_RADIUS,
-      hoverBackgroundColor: WARM_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 1)
-      ),
-    },
-  ],
-  labels: sortedSkills(CORE_SKILLS).map((skill) => skill.label),
-};
-
-export const GENSKILL_DATA = {
-  datasets: [
-    {
-      label: "General Skills",
-      data: GENERAL_SKILLS.map((skill) => skill.years),
-      backgroundColor: COOL_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 0.6)
-      ),
-      borderColor: COOL_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 1)
-      ),
-      borderWidth: BORDER_WIDTH,
-      borderRadius: BORDER_RADIUS,
-      hoverBackgroundColor: COOL_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 1)
-      ),
-    },
-  ],
-  labels: GENERAL_SKILLS.map((skill) => skill.label),
-};
-
-export const LIBSKILL_DATA = {
-  datasets: [
-    {
-      label: "Tools & Libraries",
-      data: sortedSkills(TOOL_SKILLS).map((skill) => skill.years),
-      backgroundColor: PINK_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 0.6)
-      ),
-      borderColor: PINK_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 1)
-      ),
-      borderWidth: BORDER_WIDTH,
-      borderRadius: BORDER_RADIUS,
-      hoverBackgroundColor: PINK_COLORS.map((color: string) =>
-        applyOpacityToColor(color, 1)
-      ),
-    },
-  ],
-  labels: sortedSkills(TOOL_SKILLS).map((skill) => skill.label),
-};
+]

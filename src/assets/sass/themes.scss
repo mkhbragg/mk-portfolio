@@ -1,4 +1,4 @@
-@import "./include-media.scss";
+@import './include-media.scss';
 
 :root {
   --light-shadow-color: 0deg 0% 63%;
@@ -67,7 +67,7 @@
 // dark theme variables
 $bg-color-dark: #1c1f2a;
 $default-dark: #fff;
-$secondary-text-dark: #1e2948;
+$secondary-text-dark: #687085;
 $default-dark-contrast: #222a2c;
 $well-dark: #2d3143;
 $accent-dark: #ffd500;
@@ -76,7 +76,7 @@ $secondary-dark: #ed7d3a;
 // light theme variables
 $bg-color-light: #fff;
 $default-light: #222a2c;
-$secondary-text-light: #e7ecef;
+$secondary-text-light: #747d82;
 $well-light: #f7f7f7;
 $accent-light: #ffd500;
 $accent47-light: rgba(255, 213, 0, 0.47);

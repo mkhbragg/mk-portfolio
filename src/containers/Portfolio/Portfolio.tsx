@@ -27,7 +27,7 @@ class portfolio extends Component<any, any> {
           <a
             className="Default"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
             href="https://github.com/mkhbragg"
           >
             GitHub

@@ -35,6 +35,7 @@ class Toolbar extends Component<any, any> {
             className="Large Icon"
             href="https://github.com/mkhbragg"
             target="_blank"
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={['fab', 'github']}></FontAwesomeIcon>
           </a>
@@ -43,6 +44,7 @@ class Toolbar extends Component<any, any> {
             className="Large Icon"
             href="https://www.linkedin.com/in/mariah-bragg-582abb91/"
             target="_blank"
+            rel="noreferrer"
           >
             <FontAwesomeIcon icon={['fab', 'linkedin']}></FontAwesomeIcon>
           </a>

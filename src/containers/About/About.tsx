@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import ScrollingText from '../../components/UI/ScrollingText/ScrollingText'
 import styles from './About.module.scss'
+import exportedStyles from '../../assets/sass/style.module.scss'
 import photo from '../../assets/images/mkhb_grayscale.jpg'
 
-const about = () => {
+export const About: FC<any> = (props) => {
   const abilities = [
     { id: 0, label: 'UI developer' },
     { id: 1, label: 'researcher' },
@@ -23,12 +24,18 @@ const about = () => {
         of three.
       </div>
       <img
+        className="Image"
         src={photo}
         alt="Mariah"
-        style={{ borderRadius: '50px', contentVisibility: 'auto' }}
+        style={{
+          background:
+            props.themeName === 'dark-theme'
+              ? exportedStyles.darkThemeWell
+              : exportedStyles.lightThemeWell,
+        }}
       />
     </div>
   )
 }
 
-export default about
+export default About

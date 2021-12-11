@@ -43,7 +43,11 @@ const App = (props: any) => {
               path="/skills"
               component={() => <Skills themeName={themeName} />}
             />
-            <Route path="/" exact component={About} />
+            <Route
+              path="/"
+              exact
+              component={() => <About themeName={themeName} />}
+            />
             {/* <Redirect from="/something" to="/something-else" /> */}
             <Route component={NotFound} />
           </Switch>

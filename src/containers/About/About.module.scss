@@ -8,6 +8,8 @@
   width: 30vw;
   margin: 2rem auto;
   display: block;
+  border-radius: 50px;
+  content-visibility: auto;
 }
 
 @include media('<phone') {

@@ -22,7 +22,11 @@ const about = () => {
         in pursuit of best practices, intuitive designs, and compelling groups
         of three.
       </div>
-      <img src={photo} alt="Mariah" style={{ borderRadius: '50px' }} />
+      <img
+        src={photo}
+        alt="Mariah"
+        style={{ borderRadius: '50px', contentVisibility: 'auto' }}
+      />
     </div>
   )
 }

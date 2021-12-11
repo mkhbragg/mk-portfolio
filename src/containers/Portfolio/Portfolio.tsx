@@ -35,6 +35,18 @@ class portfolio extends Component<any, any> {
           .
         </span>
         <Lottie options={defaultOptions} height={400} width={400} />
+        <div className="Caption">
+          Lottie created by{' '}
+          <a
+            className="Light"
+            href="https://lottiefiles.com/user/233502"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Jonathan Ferreira
+          </a>{' '}
+          (and modified slightly by me)
+        </div>
       </div>
     )
   }

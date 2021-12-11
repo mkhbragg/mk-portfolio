@@ -1,0 +1,15 @@
+@import '../themes.scss';
+
+.Caption {
+  font-size: $descriptionFontSize;
+  width: max-content;
+  margin: 0 auto;
+
+  @include darkTheme {
+    color: $secondary-text-dark;
+  }
+
+  @include lightTheme {
+    color: $secondary-text-light;
+  }
+}

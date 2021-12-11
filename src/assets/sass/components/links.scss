@@ -34,3 +34,15 @@ a.Default {
     }
   }
 }
+
+a.Light {
+  text-decoration: underline;
+
+  @include darkTheme {
+    color: $secondary-text-dark;
+  }
+
+  @include lightTheme {
+    color: $secondary-text-light;
+  }
+}

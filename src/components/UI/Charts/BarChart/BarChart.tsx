@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import Chart from "chart.js/auto";
+import React, { Component } from 'react'
+import Chart from 'chart.js/auto'
 
 class BarChart extends Component<any, any> {
-  node: any;
-  chart: any;
+  node: any
+  chart: any
 
   componentDidMount() {
     this.chart = new Chart(this.node, {
-      type: "bar",
+      type: 'bar',
       data: this.props.data,
       options: this.props.options,
-    });
+    })
   }
 
   render() {
@@ -19,8 +19,8 @@ class BarChart extends Component<any, any> {
         style={{ width: 800, height: 300 }}
         ref={(node) => (this.node = node)}
       ></canvas>
-    );
+    )
   }
 }
 
-export default BarChart;
+export default BarChart

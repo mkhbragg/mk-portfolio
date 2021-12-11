@@ -1,4 +1,4 @@
-@import "../themes.scss";
+@import '../themes.scss';
 
 button {
   background-color: transparent;
@@ -46,7 +46,7 @@ a.Large {
   font-size: $largeFontSize;
 }
 
-@include media("<=tablet") {
+@include media('<=tablet') {
   a.Large {
     font-size: 1rem;
   }

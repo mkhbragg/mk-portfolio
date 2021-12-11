@@ -1,4 +1,4 @@
-@import "../../assets/sass/themes.scss";
+@import '../../assets/sass/themes.scss';
 
 @include keyframes(rainbow) {
   0% {
@@ -62,7 +62,7 @@
   }
 }
 
-@include media("<phone") {
+@include media('<phone') {
   .ExperienceItem .Dates {
     left: 2rem;
     top: 1.5rem;
@@ -76,7 +76,7 @@
   }
 }
 
-@include media(">=phone") {
+@include media('>=phone') {
   .ExperienceItem .Dates {
     right: 2rem;
     top: 1rem;

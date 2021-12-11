@@ -1,4 +1,4 @@
-@import "../../assets/sass/themes.scss";
+@import '../../assets/sass/themes.scss';
 
 .Toolbar {
   height: $toolbarHeight;
@@ -41,7 +41,7 @@
       background-color: rgba($accent-dark, 0.1);
     }
 
-    @include media("<tablet") {
+    @include media('<tablet') {
       .CurrentSpace {
         font-size: 1rem;
       }
@@ -65,7 +65,7 @@
       background-color: rgba($accent-light, 0.1);
     }
 
-    @include media("<tablet") {
+    @include media('<tablet') {
       .CurrentSpace {
         font-size: 1rem;
       }
@@ -73,7 +73,7 @@
   }
 }
 
-@include media(">=tablet") {
+@include media('>=tablet') {
   .CurrentSpace {
     display: none;
   }
@@ -83,7 +83,7 @@
   }
 }
 
-@include media("<tablet") {
+@include media('<tablet') {
   .Contact {
     position: absolute;
     right: 6.5rem;

@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-const Aux = (props: any) => props.children;
+const Aux = (props: any) => props.children
 
 Aux.propTypes = {
-    children: PropTypes.node.isRequired
-};
+  children: PropTypes.node.isRequired,
+}
 
-export default Aux;
+export default Aux
